@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+  </head>
+  <style>
+    body,
+    html {
+      display: flex;
+      font-size: 10px;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: white;
+      height: 100vh;
+    }
+    .box {
+      border: 1px solid white;
+      padding-block: 1rem;
+      color: black;
+      font-size: 1.4rem;
+      background: white;
+      border-radius: 1rem;
+    }
+
+    .image {
+      min-width: 100%;
+    }
+    .image img {
+      min-width: 100%;
+      object-fit: cover;
+      border: 0.5px solid gray;
+    }
+
+    .user {
+      margin-left: 1rem;
+      font-weight: 550;
+      margin-bottom: 1rem;
+    }
+
+    .info {
+      margin: 1rem 1rem 0 1rem;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div class="user"><%=user[0].username%></div>
+      <div class="image">
+        <img src="<%=user[0].profile%>" alt="user" />
+      </div>
+      <div class="info">
+        <div class="id"><strong>User ID:</strong> <%=user[0].user_id%></div>
+        <div class="email"><strong>Email:</strong> <%=user[0].email%></div>
+        <div class="password">
+          <strong>Password:</strong> <%=user[0].password%>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

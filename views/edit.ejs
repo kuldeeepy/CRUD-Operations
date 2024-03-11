@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      border-radius: 1rem;
+    }
+    div {
+      border: 1px solid gray;
+      padding: 1rem;
+    }
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      height: 250px;
+      border-radius: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      height: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+  <body>
+    <div>
+      <img src="<%=user[0].profile%>" alt="random user" />
+      <h2>User ID: <%=user[0].user_id%>></h2>
+      <h3>Email: <%=user[0].email%></h3>
+      <h3>Password: <%=user[0].password%></h3>
+      <form method="post" action="/users/<%=user[0].user_id%>?_method=PATCH">
+        <textarea name="username"><%=user[0].username%></textarea>
+        <input type="password" placeholder="Enter Password" name="password" />
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+  </head>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      background: black;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h2 {
+      color: white;
+      align-self: center;
+    }
+    form {
+      padding: 1rem;
+      border: 1px solid gray;
+      display: flex;
+      width: 25vw;
+      gap: 1rem;
+      padding-bottom: 2rem;
+      border-radius: 1rem;
+      flex-direction: column;
+    }
+
+    input {
+      height: 2rem;
+    }
+
+    input {
+      padding-left: 0.5rem;
+    }
+
+    button {
+      height: 2rem;
+    }
+  </style>
+  <body>
+    <div>
+      <form method="post" action="http://localhost:3000/users?_method=POST">
+        <h2>SignUp</h2>
+        <input type="text" placeholder="Username" name="user" />
+        <input type="email" placeholder="Email" name="mail" />
+        <input type="password" placeholder="Password" name="pass" />
+        <input type="text" placeholder="Profile Link" name="picture" />
+        <button>Post</button>
+      </form>
+    </div>
+  </body>
+</html>
